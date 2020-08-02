@@ -10,7 +10,7 @@ logoFile="logo.png"
 #credits=""
 authors="PieKing1215"
 description='''
-Lets you combine infinity and mending.'''
+Lets you combine Infinity and Mending.'''
 
 [[dependencies.infinitymending]]
     modId="forge"
