@@ -1,11 +1,12 @@
 modLoader="javafml"
-loaderVersion="[31,)"
-#issueTrackerURL=""
+loaderVersion="[32,)"
+license="GPL v3.0"
+issueTrackerURL="https://github.com/PieKing1215/InfinityMending/issues"
 [[mods]]
 modId="infinitymending"
 version="0.1.0"
 displayName="InfinityMending"
-#displayURL=""
+displayURL="https://github.com/PieKing1215/InfinityMending"
 logoFile="logo.png"
 #credits=""
 authors="PieKing1215"
@@ -15,12 +16,12 @@ Lets you combine Infinity and Mending.'''
 [[dependencies.infinitymending]]
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[32,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.infinitymending]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.1]"
     ordering="NONE"
     side="BOTH"
