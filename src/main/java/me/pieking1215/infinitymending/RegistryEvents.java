@@ -15,7 +15,6 @@ import java.lang.reflect.Modifier;
 @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryEvents {
 
-    @ObjectHolder("minecraft:infinity")
     public static final Enchantment INFINITY = new CustomInfinityEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlotType.MAINHAND).setRegistryName("minecraft:infinity");
 
     @SubscribeEvent
@@ -25,7 +24,8 @@ public class RegistryEvents {
         );
 
         try{
-            setFinalStatic(ObfuscationReflectionHelper.findField(Enchantments.class, "field_185312_x"), INFINITY); // override original INFINITY
+            Field inf = ObfuscationReflectionHelper.findField(Enchantments.class, "field_185312_x");
+            setFinalStatic(inf, INFINITY); // override original INFINITY
         }catch(Exception e){
             e.printStackTrace();
         }
