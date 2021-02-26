@@ -21,6 +21,4 @@ Do not download this mod from anywhere other than the InfinityMending GitHub pag
 This mod may not be reposted to any other third-party websites.<br>
 [#StopModReposts](https://stopmodreposts.org)
 
-Tested on Forge 31.2.31 with MC 1.15.2 in both singleplayer and multiplayer.
-
 The mod is licensed under the [GNU General Public License v3.0](LICENSE.md)
