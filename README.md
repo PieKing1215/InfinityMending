@@ -1,6 +1,6 @@
 <h1>InfinityMending<br>
   <a href="https://www.curseforge.com/minecraft/mc-mods/infinitymending"><img src="http://cf.way2muchnoise.eu/versions/%20For%20MC%20_infinitymending_all(555-0C8E8E-fff-010101).svg" alt="Supported Versions"></a>
-  <a href="https://github.com/PieKing1215/InfinityMending/blob/master/LICENSE"><img src="https://img.shields.io/github/license/PieKing1215/InfinityMending?style=flat&color=0C8E8E" alt="License"></a>
+  <a href="https://github.com/PieKing1215/InfinityMending/blob/master/COPYING"><img src="https://img.shields.io/github/license/PieKing1215/InfinityMending?style=flat&color=0C8E8E" alt="License"></a>
   <a href="https://www.curseforge.com/minecraft/mc-mods/infinitymending"><img src="http://cf.way2muchnoise.eu/full_infinitymending_downloads(E04E14-555-fff-010101-1C1C1C).svg" alt="Download Count"></a>
 </h1>
 
@@ -23,4 +23,4 @@ This mod may not be reposted to any other third-party websites.<br>
 
 Tested on Forge 31.2.31 with MC 1.15.2 in both singleplayer and multiplayer.
 
-The mod is licensed under the [GNU General Public License v3.0](LICENSE.md)
+The mod is licensed under the [GNU Lesser General Public License v3.0](COPYING)
