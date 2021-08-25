@@ -1,5 +1,6 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[37,)"
+license="LGPL v3.0"
 #issueTrackerURL=""
 [[mods]]
 modId="infinitymending"
@@ -15,12 +16,12 @@ Lets you combine Infinity and Mending.'''
 [[dependencies.infinitymending]]
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[37,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.infinitymending]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.17,]"
     ordering="NONE"
     side="BOTH"

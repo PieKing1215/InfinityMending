@@ -1,17 +1,17 @@
 package me.pieking1215.infinitymending;
 
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.InfinityEnchantment;
-import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.enchantment.ArrowInfiniteEnchantment;
+import net.minecraft.world.item.enchantment.Enchantment;
 
-public class CustomInfinityEnchantment extends InfinityEnchantment {
+public class CustomInfinityEnchantment extends ArrowInfiniteEnchantment {
 
-    public CustomInfinityEnchantment(Rarity rarityIn, EquipmentSlotType... slots) {
+    public CustomInfinityEnchantment(Rarity rarityIn, EquipmentSlot... slots) {
         super(rarityIn, slots);
     }
 
-    public boolean canApplyTogether(Enchantment ench) {
-        // copy of Enchantment::canApplyTogether
+    public boolean checkCompatibility(Enchantment ench) {
+        // copy of Enchantment::checkCompatibility
         return this != ench;
     }
 }

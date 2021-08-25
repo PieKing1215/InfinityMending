@@ -1,12 +1,12 @@
 package me.pieking1215.infinitymending;
 
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.ObjectHolder;
 
 import java.lang.reflect.Field;
@@ -16,7 +16,7 @@ import java.lang.reflect.Modifier;
 public class RegistryEvents {
 
     @ObjectHolder("minecraft:infinity")
-    public static final Enchantment INFINITY = new CustomInfinityEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlotType.MAINHAND).setRegistryName("minecraft:infinity");
+    public static final Enchantment INFINITY = new CustomInfinityEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.MAINHAND).setRegistryName("minecraft:infinity");
 
     @SubscribeEvent
     public static void registerTileEntities(RegistryEvent.Register<Enchantment> event) {
@@ -25,7 +25,7 @@ public class RegistryEvents {
         );
 
         try{
-            setFinalStatic(ObfuscationReflectionHelper.findField(Enchantments.class, "field_185312_x"), INFINITY); // override original INFINITY
+            setFinalStatic(ObfuscationReflectionHelper.findField(Enchantments.class, "INFINITY_ARROWS"), INFINITY); // override original INFINITY
         }catch(Exception e){
             e.printStackTrace();
         }
