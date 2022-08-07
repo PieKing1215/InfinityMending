@@ -30,7 +30,7 @@ version = '1.18-0.1.1'
 group = 'me.pieking1215.infinitymending'
 archivesBaseName = 'InfinityMending'
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '16'
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '17'
 
 minecraft {
     mappings channel: 'official', version: '1.18.2'
@@ -76,7 +76,7 @@ minecraft {
 
 dependencies {
 
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.12'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.69'
 
 }
 
