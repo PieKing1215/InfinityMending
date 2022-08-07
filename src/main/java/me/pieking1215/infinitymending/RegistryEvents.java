@@ -25,7 +25,7 @@ public class RegistryEvents {
         );
 
         try{
-            setFinalStatic(ObfuscationReflectionHelper.findField(Enchantments.class, "INFINITY_ARROWS"), INFINITY); // override original INFINITY
+            setFinalStatic(ObfuscationReflectionHelper.findField(Enchantments.class, "f_44952_"), INFINITY); // override original INFINITY
         }catch(Exception e){
             e.printStackTrace();
         }

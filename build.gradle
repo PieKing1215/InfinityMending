@@ -26,14 +26,14 @@ repositories {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 
-version = '1.17-0.1.0'
+version = '1.18-0.1.1'
 group = 'me.pieking1215.infinitymending'
 archivesBaseName = 'InfinityMending'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '16'
 
 minecraft {
-    mappings channel: 'official', version: '1.17.1'
+    mappings channel: 'official', version: '1.18.2'
 
     runs {
         client {
@@ -76,7 +76,7 @@ minecraft {
 
 dependencies {
 
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.44'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.12'
 
 }
 
