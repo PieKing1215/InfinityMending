@@ -32,7 +32,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.19-0.1.1'
+version = '1.19-0.2.0'
 group = 'me.pieking1215.infinitymending'
 archivesBaseName = 'InfinityMending'
 
