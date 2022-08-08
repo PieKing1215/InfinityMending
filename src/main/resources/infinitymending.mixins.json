@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "me.pieking1215.infinitymending.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "refmap": "waterdripsound.refmap.json",
+  "mixins": [
+    "MixinInfinity"
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}

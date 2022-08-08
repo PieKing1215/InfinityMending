@@ -4,11 +4,16 @@ buildscript {
             name = "forge"
             url = "https://files.minecraftforge.net/maven"
         }
+        maven {
+            name = "sponge"
+            url = "https://repo.spongepowered.org/repository/maven-public/"
+        }
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 
@@ -25,21 +30,29 @@ repositories {
 
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
 
-version = '1.18-0.1.1'
+version = '1.19-0.1.1'
 group = 'me.pieking1215.infinitymending'
 archivesBaseName = 'InfinityMending'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '17'
 
+mixin {
+    add sourceSets.main, "infinitymending.refmap.json"
+}
+
 minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'official', version: '1.19.2'
 
     runs {
         client {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+            arg "-mixin.config=infinitymending.mixins.json"
 
             mods {
                 infinitymending {
@@ -52,6 +65,8 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
 
             mods {
                 infinitymending {
@@ -64,7 +79,9 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
-            args '--mod', 'infinitymending', '--all', '--output', file('src/generated/resources/')
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+            args '--mod', 'infinitymending', '--all', '--output', file('src/generated/resources/'), "-mixin.config=infinitymending.mixins.json"
             mods {
                 infinitymending {
                     source sourceSets.main
@@ -76,7 +93,9 @@ minecraft {
 
 dependencies {
 
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.69'
+    minecraft 'net.minecraftforge:forge:1.19.2-43.0.1'
+
+    annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 
 }
 
@@ -89,7 +108,8 @@ jar {
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"pieking1215",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+            "MixinConfigs": "infinitymending.mixins.json"
         ])
     }
 }
