@@ -1,8 +1,8 @@
 <h1>InfinityMending<br>
-  <a href="https://www.curseforge.com/minecraft/mc-mods/infinitymending"><img src="http://cf.way2muchnoise.eu/versions/%20For%20MC%20_399752_all(555-0C8E8E-fff-010101).svg" alt="Supported Versions"></a>
+  <a href="https://modrinth.com/mod/infinitymending"><img src="http://cf.way2muchnoise.eu/versions/%20For%20MC%20_399752_all(555-0C8E8E-fff-010101).svg" alt="Supported Versions"></a>
   <a href="https://github.com/PieKing1215/InfinityMending/blob/master/COPYING"><img src="https://img.shields.io/github/license/PieKing1215/InfinityMending?style=flat&color=0C8E8E" alt="License"></a>
-  <a href="https://modrinth.com/mod/infinitymending"><img src="https://modrinth-utils.vercel.app/api/badge/downloads?id=rSID3pzs&logo=true" alt="Modrinth Download Count"></a>
-  <a href="https://www.curseforge.com/minecraft/mc-mods/infinitymending"><img src="http://cf.way2muchnoise.eu/full_399752_downloads(E04E14-555-fff-010101-1C1C1C).svg" alt="Download Count"></a>
+  <a href="https://modrinth.com/mod/infinitymending"><img src="https://img.shields.io/modrinth/dt/rSID3pzs?label=Modrinth downloads&logo=modrinth" alt="Modrinth Download Count"></a>
+  <!-- <a href="https://www.curseforge.com/minecraft/mc-mods/infinitymending"><img src="http://cf.way2muchnoise.eu/full_399752_downloads(E04E14-555-fff-010101-1C1C1C).svg" alt="Download Count"></a> -->
   <a href="https://ko-fi.com/X8X34Y6MZ"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Donate on ko-fi" width="160px"></a>
 </h1>
 
@@ -13,7 +13,7 @@
   <td>Infinity Mending</td>
   <td><a href="https://github.com/PieKing1215/InfinityMending">GitHub</a></td>
   <td><a href="https://modrinth.com/mod/infinitymending">Modrinth</a></td>
-  <td><a href="https://www.curseforge.com/minecraft/mc-mods/infinitymending">CurseForge</a></td>
+  <td><a href="https://www.curseforge.com/minecraft/mc-mods/infinitymending">CurseForge</a> (Mirror)</td>
 </tr>
 </table>
 
